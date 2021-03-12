@@ -3,13 +3,13 @@
 
 A [Laravel](https://laravel.com) package for creating a drag-and-drop form builder using the [JQuery Form Builder](https://formbuilder.online).
 
-Demo: [http://formbuilderdemo.balancedesign.dev/](http://form-builder.balancedesign.dev/)
+Demo: [http://formbuilderdemo.balancedesign.dev/](http://formbuilderdemo.balancedesign.dev/)
 
-*Note: Features like email, registration and file uploads are disabled in the demo*
+*Note: Some features like email, registration and file uploads are disabled in the demo*
 
 Screenshot:
 
-![alt text](http://formbuilderdemo.balancedesign.dev/img/formbuilderdemo_screenshot.jpg "Form Builder Screenshot")
+![alt text](http://formbuilderdemo.balancedesign.dev/img/formbuilderdemo_screenshot.jpg "Active eCommerce CMS Form Builder Screenshot")
 
 The forms fields are saved as json and stored in your database. A member of your site can create, edit and delete forms. Forms belong to the users that created them and each form has a unique link that can be shared publicly.
 
@@ -25,9 +25,9 @@ Form permission options
  + Private - only authenticated members of your site can access the form. Provide the option for users to edit their previous submissions.
 
 ## Requirements
-+ Laravel 5.7
++ [Active eCommerce CMS (version 3 and up)](https://codecanyon.net/item/active-ecommerce-cms/23471405)
++ Laravel 6
 + MySQL
-+ [Laravel Authentication](https://laravel.com/docs/5.7/authentication) - php artisan make:auth
 
 ## Dependencies Included with Package
 + jQuery UI - User interface actions built on jQuery. [View jQuery ui Documentation](https://jqueryui.com/)
@@ -86,7 +86,6 @@ At the bottom of the blade file, just above the closing the closing body tag:
 @stack('scripts')
 ```
 *Note: If you ever need to change which files are called using these @stack values, you can update the config file.*
-
 
 
 ### Step Six:
