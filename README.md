@@ -25,7 +25,7 @@ Form permission options
  + Private - only authenticated members of your site can access the form. Provide the option for users to edit their previous submissions.
 
 ## Requirements
-+ [Active eCommerce CMS (version 3 and up)](https://codecanyon.net/item/active-ecommerce-cms/23471405)
++ [Active eCommerce CMS](https://codecanyon.net/item/active-ecommerce-cms/23471405) - version 3 and up
 + Laravel 6
 + MySQL
 
