@@ -4015,7 +4015,7 @@
 				$input_grp_btn = $('<div/>', {'class': 'input-group-btn'}),
 				$dropdown_toggle = $('<button/>', {type: 'button', 'class': 'btn btn-default dropdown-toggle'})
 					.on('click', { self: self }, self._onDropdownToggleClicked)
-					.append($('<span/>', {'class': 'caret'})),
+					.append($('<span/>', {'class': 'none'})),
 				position;
 
 			switch (self.position){

@@ -29,8 +29,8 @@ class FormAllowSubmissionEdit
         if (! $submission->form->allowsEdit()) {
             // this form does not allow edit
             return redirect()
-                        ->route('formbuilder::my-submissions.show', $submission->id)
-                        ->with('error', "Form '{$submission->form->name}' does not allow submission edit.");
+                ->route('formbuilder::my-submissions.show', $submission->id)
+                ->with('error', "Form '{$submission->form->name}' does not allow submission edit.");
         }
 
         return $next($request);

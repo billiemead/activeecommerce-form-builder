@@ -1,7 +1,7 @@
-@extends('formbuilder::layout')
+@extends('formbuilder::layouts.backend')
 
 @section('content')
-<div class="">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card rounded-0">
@@ -11,16 +11,16 @@
                     </h5>
                     <div class="btn-toolbar float-md-right" role="toolbar">
                         <div class="btn-group" role="group">
-                            <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-primary float-md-right btn-sm">
+                            <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-primary float-md-right">
                                 <i class="las la-arrow-left"></i> 
                             </a>
-                            <a href="{{ route('formbuilder::forms.submissions.index', $form) }}" class="btn btn-primary float-md-right btn-sm">
+                            <a href="{{ route('formbuilder::forms.submissions.index', $form) }}" class="btn btn-primary float-md-right">
                                 <i class="las la-list"></i> {{ translate('Submissions')}}
                             </a> 
-                            <a href="{{ route('formbuilder::forms.edit', $form) }}" class="btn btn-primary float-md-right btn-sm">
+                            <a href="{{ route('formbuilder::forms.edit', $form) }}" class="btn btn-primary float-md-right">
                                 <i class="la las-edit"></i> {{ translate('Edit')}}
                             </a> 
-                            <a href="{{ route('formbuilder::forms.create') }}" class="btn btn-primary float-md-right btn-sm">
+                            <a href="{{ route('formbuilder::forms.create') }}" class="btn btn-primary float-md-right">
                                 <i class="la las-plus-circle"></i> {{ translate('New Form')}}
                             </a>
                         </div>

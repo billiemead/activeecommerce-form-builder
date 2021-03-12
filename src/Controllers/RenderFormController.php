@@ -76,8 +76,8 @@ class RenderFormController extends Controller
             DB::commit();
 
             return redirect()
-                    ->route('formbuilder::form.feedback', $identifier)
-                    ->with('success', 'Form successfully submitted.');
+                ->route('formbuilder::form.feedback', $identifier)
+                ->with('success', 'Form successfully submitted.');
         } catch (Throwable $e) {
             info($e);
 

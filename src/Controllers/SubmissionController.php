@@ -36,13 +36,13 @@ class SubmissionController extends Controller
         $user = auth()->user();
 
         $form = Form::where(['user_id' => $user->id, 'id' => $form_id])
-                    ->with(['user'])
-                    ->firstOrFail();
+            ->with(['user'])
+            ->firstOrFail();
 
         $submissions = $form->submissions()
-                            ->with('user')
-                            ->latest()
-                            ->paginate(100);
+            ->with('user')
+            ->latest()
+            ->paginate(100);
 
         // get the header for the entries in the form
         $form_headers = $form->getEntriesHeader();
@@ -65,11 +65,11 @@ class SubmissionController extends Controller
     public function show($form_id, $submission_id)
     {
         $submission = Submission::with('user', 'form')
-                            ->where([
-                                'form_id' => $form_id,
-                                'id' => $submission_id,
-                            ])
-                            ->firstOrFail();
+            ->where([
+                'form_id' => $form_id,
+                'id' => $submission_id,
+            ])
+            ->firstOrFail();
 
         $form_headers = $submission->form->getEntriesHeader();
 
@@ -91,7 +91,7 @@ class SubmissionController extends Controller
         $submission->delete();
 
         return redirect()
-                    ->route('formbuilder::forms.submissions.index', $form_id)
-                    ->with('success', 'Submission successfully deleted.');
+            ->route('formbuilder::forms.submissions.index', $form_id)
+            ->with('success', 'Submission successfully deleted.');
     }
 }

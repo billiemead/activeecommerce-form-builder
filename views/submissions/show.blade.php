@@ -1,4 +1,4 @@
-@extends('formbuilder::layout')
+@extends('formbuilder::layouts.backend')
 
 @section('content')
 <div class="container">
@@ -29,7 +29,7 @@
                 <ul class="list-group list-group-flush">
                     @foreach($form_headers as $header)
                         <li class="list-group-item">
-                            <strong>{{ $header['label'] ?? title_case($header['name']) }}: </strong> 
+                            <strong>{{ $header['label'] ?? ($header['name']) }}: </strong> 
                             <span class="float-right">
                                 {{ $submission->renderEntryContent($header['name'], $header['type']) }}
                             </span>
@@ -42,24 +42,24 @@
         <div class="col-md-4">
             <div class="card rounded-0">
                 <div class="card-header">
-                    <h5 class="card-title">{{ transfer('Details')}}</h5>
+                    <h5 class="card-title">{{ translate('Details')}}</h5>
                 </div>
 
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <strong>{{ transfer('Form:')}} </strong> 
+                        <strong>{{ translate('Form:')}} </strong> 
                         <span class="float-right">{{ $submission->form->name }}</span>
                     </li>
                     <li class="list-group-item">
-                        <strong>{{ transfer('Submitted By:')}} </strong> 
+                        <strong>{{ translate('Submitted By:')}} </strong> 
                         <span class="float-right">{{ $submission->user->name ?? 'Guest' }}</span>
                     </li>
                     <li class="list-group-item">
-                        <strong>{{ transfer('Last Updated On:')}} </strong> 
+                        <strong>{{ translate('Last Updated On:')}} </strong> 
                         <span class="float-right">{{ $submission->updated_at->toDayDateTimeString() }}</span>
                     </li>
                     <li class="list-group-item">
-                        <strong>{{ transfer('Submitted On:')}} </strong> 
+                        <strong>{{ translate('Submitted On:')}} </strong> 
                         <span class="float-right">{{ $submission->created_at->toDayDateTimeString() }}</span>
                     </li>
                 </ul>

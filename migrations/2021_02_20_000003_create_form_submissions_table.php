@@ -19,9 +19,9 @@ class CreateFormSubmissionsTable extends Migration
     public function up()
     {
         Schema::create('form_submissions', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedInteger('form_id');
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->increments('id');
+            $table->integer('form_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->text('content');
             $table->timestamps();
             $table->foreign('form_id')->references('id')->on('forms')->onDelete('CASCADE');

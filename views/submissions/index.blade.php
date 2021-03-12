@@ -1,7 +1,7 @@
-@extends('formbuilder::layout')
+@extends('formbuilder::layouts.backend')
 
 @section('content')
-<div class="container-fluid">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card rounded-0">
@@ -10,7 +10,7 @@
                         {{ $pageTitle }} ({{ $submissions->count() }})
                     </h5>    
                         <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-primary float-md-right btn-sm">
-                            <i class="las la-arrow-left"></i> {{ transfer('Back To Forms')}}
+                            <i class="las la-arrow-left"></i> {{ translate('Back To Forms')}}
                         </a>
                     
                 </div>
@@ -21,11 +21,11 @@
                             <thead>
                                 <tr>
                                     <th class="five">#</th>
-                                    <th class="fifteen">{{ transfer('User Name')}}</th>
+                                    <th class="fifteen">{{ translate('User Name')}}</th>
                                     @foreach($form_headers as $header)
-                                        <th>{{ $header['label'] ?? title_case($header['name']) }}</th>
+                                        <th>{{ $header['label'] ?? ($header['name']) }}</th>
                                     @endforeach
-                                    <th class="fifteen">{{ transfer('Actions')}}</th>
+                                    <th class="fifteen">{{ translate('Actions')}}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -44,7 +44,7 @@
                                         @endforeach
                                         <td>
                                             <a href="{{ route('formbuilder::forms.submissions.show', [$form, $submission->id]) }}" class="btn btn-primary btn-sm" title="View submission">
-                                                <i class="las la-eye"></i> {{ transfer('View')}}
+                                                <i class="las la-eye"></i> {{ translate('View')}}
                                             </a> 
 
                                             <form action="{{ route('formbuilder::forms.submissions.destroy', [$form, $submission]) }}" method="POST" id="deleteSubmissionForm_{{ $submission->id }}" class="d-inline-block">

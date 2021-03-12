@@ -29,8 +29,8 @@ class PublicFormAccess
             // the user must be authenticated
             if (! auth()->check()) {
                 return redirect()
-                            ->route('login')
-                            ->with('error', "Form '{$form->name}' requires you to login before you can access it.");
+                    ->route('login')
+                    ->with('error', "Form '{$form->name}' requires you to login before you can access it.");
             }
         }
 

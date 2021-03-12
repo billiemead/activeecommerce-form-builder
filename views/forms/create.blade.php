@@ -1,4 +1,4 @@
-@extends('formbuilder::layout')
+@extends('formbuilder::layouts.backend')
 
 @section('content')
     <div class="container">
@@ -9,7 +9,7 @@
                         <h5 class="card-title">
                             {{ $pageTitle ?? '' }}
                         </h5>
-                        <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-sm btn-primary float-md-right">
+                        <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-primary float-md-right">
                             <i class="las la-arrow-left"></i> {{ translate('Back To My Forms') }}
                         </a>
                     </div>

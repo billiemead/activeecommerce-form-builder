@@ -19,8 +19,8 @@ class CreateFormsTable extends Migration
     public function up()
     {
         Schema::create('forms', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->increments('id');
+            $table->integer('user_id')->unsigned()->nullable();
             $table->string('name');
             $table->string('visibility');
             $table->boolean('allows_edit')->default(false);

@@ -1,21 +1,21 @@
-@extends('formbuilder::layout')
+@extends('formbuilder::layouts.backend')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card rounded-0">
+            <div class="card card-form rounded-0">
                 <div class="card-header">
                     <h5 class="card-title">
                         {{translate('Forms') }}
                     </h5>
                     <div class="btn-toolbar float-md-right" role="toolbar">
                         <div class="btn-group" role="group" aria-label="Third group">
-                            <a href="{{ route('formbuilder::forms.create') }}" class="btn btn-circle btn-info">
-                                <i class="la las-plus-circle"></i> {{translate('Create a New Form') }}
+                            <a href="{{ route('formbuilder::forms.create') }}" class="btn btn-info">
+                                <i class="las la-plus-circle"></i> {{translate('Create a New Form') }}
                             </a>
 
-                            <a href="{{ route('formbuilder::my-submissions.index') }}" class="btn btn-primary btn-sm">
+                            <a href="{{ route('formbuilder::my-submissions.index') }}" class="btn btn-primary">
                                 <i class="las la-list"></i> {{translate('My Submissions') }}
                             </a>
                         </div>
@@ -79,7 +79,7 @@
                 @else
                     <div class="card-body">
                         <h4 class="text-danger text-center">
-                            {{translate('No form to display') }}
+                            {{translate('No Form(s) to Display Yet!') }}
                         </h4>
                     </div>  
                 @endif

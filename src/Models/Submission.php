@@ -103,20 +103,20 @@ class Submission extends Model
                             // were chosen in the submission we have on file.
                             if (is_array($current_submitted_val)) {
                                 $entry['values'] = collect($entry['values'])
-                                                    ->map(function ($v) use ($current_submitted_val) {
-                                                        // if this value in the 'values' array is in the
-                                                        // previous selection made by the user in their
-                                                        // submission, we will add the selected and checked
-                                                        // flag to the value so that it will be pre-selected
-                                                        // when we render the form
-                                                        if (in_array($v['value'], $current_submitted_val)) {
-                                                            $v['selected'] = true;
-                                                            $v['checked'] = 'checked';
-                                                        }
+                                    ->map(function ($v) use ($current_submitted_val) {
+                                        // if this value in the 'values' array is in the
+                                        // previous selection made by the user in their
+                                        // submission, we will add the selected and checked
+                                        // flag to the value so that it will be pre-selected
+                                        // when we render the form
+                                        if (in_array($v['value'], $current_submitted_val)) {
+                                            $v['selected'] = true;
+                                            $v['checked'] = 'checked';
+                                        }
 
-                                                        return $v;
-                                                    })
-                                                    ->toArray();
+                                        return $v;
+                                    })
+                                    ->toArray();
                             }
 
                             // check if the 'other' input option is available

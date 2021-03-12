@@ -1,22 +1,89 @@
 .fb-editor {
-	background-image: #f2f2f2; 
-	/*background: url('http://formbuilder.readthedocs.io/en/latest/img/noise.png');*/
+    background-image: #f2f2f2;
+    /*background: url('http://formbuilder.readthedocs.io/en/latest/img/noise.png');*/
 }
+
 .five {
-	width: 5% !important;
+    width: 5% !important;
 }
+
 .ten {
-	width: 10% !important;
+    width: 10% !important;
 }
+
 .fifteen {
-	width: 15% !important;
+    width: 15% !important;
 }
+
 .twenty {
-	width: 20% !important;
+    width: 20% !important;
 }
+
 .twenty-five {
-	width: 25% !important;
+    width: 25% !important;
 }
+
 .d-inline-block {
-	display: inline-block !important;
+    display: inline-block !important;
+}
+
+.table-responsive {
+    padding: 2%;
+}
+
+.card {
+    padding: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.card-body-form {
+    background-color: #fafafa;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+.frmb .ui-sortable {
+    min-height: 454.043px;
+    border: 1px solid #c5c5c5;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.form-field {
+    border-bottom: 1px dotted #aaa;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    width: 85%;
+}
+
+.tooltip-element {
+    color: #fff;
+    background: #007bff;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 14px;
+    margin: 0 5px;
+    font-size: 10px;
+}
+
+body > div > div.aiz-content-wrapper > div.aiz-main-content > div:nth-child(1) > div > div > div > div > div.table-responsive > table > thead > tr.footable-filtering > th > form > div > div > input {
+    height: 30.74px;
+}
+
+.footable-last-visible {
+    text-align: center;
 }
