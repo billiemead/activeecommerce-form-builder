@@ -6,21 +6,21 @@
         <div class="col-md-12">
             <div class="card rounded-0">
                 <div class="card-header">
-                    <h5 class="card-title">
+                    <h1 class="card-title">
                         {{ translate('Form Preview for')}} '{{ $form->name }}' 
-                    </h5>
+                    </h1>
                     <div class="btn-toolbar float-md-right" role="toolbar">
                         <div class="btn-group" role="group">
                             <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-primary float-md-right">
                                 <i class="las la-arrow-left"></i> 
                             </a>
-                            <a href="{{ route('formbuilder::forms.submissions.index', $form) }}" class="btn btn-primary float-md-right">
+                            <a href="{{ route('formbuilder::forms.submissions.index', $form) }}" class="btn btn-info float-md-right">
                                 <i class="las la-list"></i> {{ translate('Submissions')}}
                             </a> 
-                            <a href="{{ route('formbuilder::forms.edit', $form) }}" class="btn btn-primary float-md-right">
+                            <a href="{{ route('formbuilder::forms.edit', $form) }}" class="btn btn-warning float-md-right">
                                 <i class="la las-edit"></i> {{ translate('Edit')}}
                             </a> 
-                            <a href="{{ route('formbuilder::forms.create') }}" class="btn btn-primary float-md-right">
+                            <a href="{{ route('formbuilder::forms.create') }}" class="btn btn-danger float-md-right">
                                 <i class="la las-plus-circle"></i> {{ translate('New Form')}}
                             </a>
                         </div>

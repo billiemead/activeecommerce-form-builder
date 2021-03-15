@@ -6,15 +6,15 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">
+                    <h1 class="card-title">
                         {{ $pageTitle ?? '' }}
-                    </h5>
+                    </h1>
                     <div class="btn-toolbar float-md-right" role="toolbar">
                         <div class="btn-group" role="group">
                             <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-primary float-md-right">
                                 <i class="las la-arrow-left"></i> {{ translate('Back To My Forms')}}
                             </a>
-                            <button class="btn btn-secondary clipboard" data-clipboard-text="{{ route('formbuilder::form.render', $form->identifier) }}" data-message="Link Copied" data-original="Copy Form Link" title="Copy form URL to clipboard">
+                            <button class="btn btn-success clipboard" data-clipboard-text="{{ route('formbuilder::form.render', $form->identifier) }}" data-message="Link Copied" data-original="Copy Form Link" title="Copy form URL to clipboard">
                                 <i class="la las-clipboard"></i> {{ translate('Copy Form Link')}}
                             </button> 
                         </div>

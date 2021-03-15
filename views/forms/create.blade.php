@@ -6,9 +6,9 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">
+                        <h1 class="card-title">
                             {{ $pageTitle ?? '' }}
-                        </h5>
+                        </h1>
                         <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-primary float-md-right">
                             <i class="las la-arrow-left"></i> {{ translate('Back To My Forms') }}
                         </a>

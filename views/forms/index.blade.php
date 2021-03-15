@@ -6,12 +6,12 @@
         <div class="col-md-12">
             <div class="card card-form rounded-0">
                 <div class="card-header">
-                    <h5 class="card-title">
+                    <h1 class="card-title">
                         {{translate('Forms') }}
-                    </h5>
+                    </h1>
                     <div class="btn-toolbar float-md-right" role="toolbar">
                         <div class="btn-group" role="group" aria-label="Third group">
-                            <a href="{{ route('formbuilder::forms.create') }}" class="btn btn-info">
+                            <a href="{{ route('formbuilder::forms.create') }}" class="btn btn-success">
                                 <i class="las la-plus-circle"></i> {{translate('Create a New Form') }}
                             </a>
 
@@ -47,7 +47,7 @@
                                             <a href="{{ route('formbuilder::forms.submissions.index', $form) }}" class="btn btn-primary" title="View submissions for form '{{ $form->name }}'">
                                                 <i class="las la-list"></i> {{translate('Data') }}
                                             </a>
-                                            <a href="{{ route('formbuilder::forms.show', $form) }}" class="btn btn-secondary" title="Preview form '{{ $form->name }}'">
+                                            <a href="{{ route('formbuilder::forms.show', $form) }}" class="btn btn-info" title="Preview form '{{ $form->name }}'">
                                                 <i class="las la-eye"></i> 
                                             </a> 
                                             <a href="{{ route('formbuilder::forms.edit', $form) }}" class="btn btn-warning" title="Edit form">

@@ -6,9 +6,9 @@
         <div class="col-md-12">
             <div class="card rounded-0">
                 <div class="card-header">
-                    <h5 class="card-title">
+                    <h1 class="card-title">
                         {{ translate('Form Successfully submitted')}}
-                    </h5>
+                    </h1>
                     @auth
                         <a href="{{ route('formbuilder::my-submissions.index') }}" class="btn btn-primary btn-sm float-md-right">
                             <i class="las la-list"></i> {{ translate('Go To My Submissions')}}
@@ -16,7 +16,7 @@
                     @endauth
                 </div>
 
-                <div class="card-body">
+                <div class="card-body card-body-form">
                     <h3 class="text-center text-success">
                         {{ translate('Your entry for')}} <strong>{{ $form->name }}</strong> {{ translate('was successfully submitted.')}}
                     </h3>

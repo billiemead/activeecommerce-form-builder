@@ -6,9 +6,9 @@
         <div class="col-md-12">
             <div class="card rounded-0">
                 <div class="card-header">
-                    <h5 class="card-title">
+                    <h1 class="card-title">
                         {{ $pageTitle }} ({{ $submissions->count() }})
-                    </h5>
+                    </h1>
                     <a href="{{ route('formbuilder::forms.index') }}" class="btn btn-primary float-md-right btn-sm" title="Back To My Forms">
                         <i class="las la-list"></i> {{ translate('My Forms')}}
                     </a>
